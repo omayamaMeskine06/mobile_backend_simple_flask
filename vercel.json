@@ -1,1 +1,9 @@
-
+{
+  "version": 2,
+  "builds": [
+    { "src": "backend.py", "use": "@vercel/python", "config": { "includeFiles": "news_data.json" } }
+  ],
+  "routes": [
+    { "src": "/(.*)", "dest": "backend.py" }
+  ]
+}
